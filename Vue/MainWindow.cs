@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace Wankul
 {
-    public partial class Login : Form
+    public partial class MainWindow : Form
     {
-        public Login()
+        public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            Console.WriteLine("Form loaded");
-        }
-
-        private void button_connect_Click(object sender, EventArgs e)
-        {
         }
     }
 }
