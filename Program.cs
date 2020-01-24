@@ -6,6 +6,7 @@ namespace Wankul
     static class Program
     {
         static Login login_form;
+        
 
         /// <summary>
         /// Point d'entrée principal de l'application.

@@ -34,7 +34,6 @@ namespace Wankul
         private void button_connect_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            
         }
     }
 }

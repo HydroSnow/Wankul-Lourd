@@ -34,14 +34,13 @@
             this.input_password = new System.Windows.Forms.TextBox();
             this.label_username = new System.Windows.Forms.Label();
             this.label_password = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label_state = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panel_input = new System.Windows.Forms.Panel();
+            this.panel_input.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_connect
             // 
-            this.button_connect.Location = new System.Drawing.Point(93, 87);
+            this.button_connect.Location = new System.Drawing.Point(89, 89);
             this.button_connect.Name = "button_connect";
             this.button_connect.Size = new System.Drawing.Size(75, 23);
             this.button_connect.TabIndex = 3;
@@ -55,6 +54,7 @@
             this.input_username.Name = "input_username";
             this.input_username.Size = new System.Drawing.Size(120, 20);
             this.input_username.TabIndex = 1;
+            this.input_username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.input_username_KeyDown);
             // 
             // input_password
             // 
@@ -63,6 +63,7 @@
             this.input_password.Size = new System.Drawing.Size(120, 20);
             this.input_password.TabIndex = 2;
             this.input_password.UseSystemPasswordChar = true;
+            this.input_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.input_password_KeyDown);
             // 
             // label_username
             // 
@@ -82,27 +83,17 @@
             this.label_password.TabIndex = 0;
             this.label_password.Text = "Mot de passe";
             // 
-            // panel1
+            // panel_input
             // 
-            this.panel1.Controls.Add(this.label_state);
-            this.panel1.Controls.Add(this.input_password);
-            this.panel1.Controls.Add(this.label_password);
-            this.panel1.Controls.Add(this.button_connect);
-            this.panel1.Controls.Add(this.label_username);
-            this.panel1.Controls.Add(this.input_username);
-            this.panel1.Location = new System.Drawing.Point(128, 111);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 144);
-            this.panel1.TabIndex = 5;
-            // 
-            // label_state
-            // 
-            this.label_state.Location = new System.Drawing.Point(3, 115);
-            this.label_state.Name = "label_state";
-            this.label_state.Size = new System.Drawing.Size(250, 18);
-            this.label_state.TabIndex = 4;
-            this.label_state.Text = "Non connecté";
-            this.label_state.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel_input.Controls.Add(this.input_password);
+            this.panel_input.Controls.Add(this.label_password);
+            this.panel_input.Controls.Add(this.button_connect);
+            this.panel_input.Controls.Add(this.label_username);
+            this.panel_input.Controls.Add(this.input_username);
+            this.panel_input.Location = new System.Drawing.Point(128, 114);
+            this.panel_input.Name = "panel_input";
+            this.panel_input.Size = new System.Drawing.Size(256, 128);
+            this.panel_input.TabIndex = 0;
             // 
             // Login
             // 
@@ -111,14 +102,15 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(518, 345);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_input);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Les Fromageries Wankul";
             this.Load += new System.EventHandler(this.Login_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel_input.ResumeLayout(false);
+            this.panel_input.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -130,8 +122,7 @@
         private System.Windows.Forms.TextBox input_password;
         private System.Windows.Forms.Label label_username;
         private System.Windows.Forms.Label label_password;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label_state;
+        private System.Windows.Forms.Panel panel_input;
     }
 }
 
