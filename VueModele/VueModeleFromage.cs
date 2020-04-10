@@ -4,10 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wankul.VueModele
+namespace Wankul
 {
-    class VueModeleFromage
+    class VueModeleFromage : AbstractVueModele<Fromage, ResponseFromage>
     {
-        // Requetes précises pour récuperer les fromages, les changer ou supprimer
+        protected override string GetApiUrl()
+        {
+            return "fromage";
+        }
+
+        public string Create(Fromage fromage)
+        {
+            ResponseFromage responseFromage = Post(fromage);
+            if (!responseFromage.valid)
+                return responseFromage.error;
+            return null;
+        }
+
+        public ResponseFromage ReadAll() { return Get(); }
     }
 }
