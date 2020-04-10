@@ -13,14 +13,24 @@ namespace Wankul
             return "fromage";
         }
 
+        public ResponseFromage ReadAll() { return GET(); }
+
         public string Create(Fromage fromage)
         {
-            ResponseFromage responseFromage = Post(fromage);
+            ResponseFromage responseFromage = POST(fromage);
             if (!responseFromage.valid)
                 return responseFromage.error;
             return null;
         }
 
-        public ResponseFromage ReadAll() { return Get(); }
+        public string Update(Fromage fromage)
+        {
+            ResponseFromage responseFromage = PUT(fromage, fromage.id);
+            if (!responseFromage.valid)
+                return responseFromage.error;
+            return null;
+        }
+
+        public bool Delete(Fromage fromage) { return DELETE(fromage.id).valid; }
     }
 }

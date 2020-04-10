@@ -34,11 +34,16 @@ namespace Wankul
 
         private void button_connect_Click(object sender, EventArgs e)
         {
-            // this.Visible = false;
-            VueModeleFromage vmFromage = new VueModeleFromage();
-            // Fromage fromage = vmFromage.ReadAll().result[1];
-            // MessageBox.Show(SimpleJson.SerializeObject(new Fromage(69, "Test", "Origine", 1, 1, "img", 69.5)));
-            MessageBox.Show(vmFromage.Create(new Fromage(69, "Test", "Origine", 1, 1, "img", 69.5)));
+            if (!CheckLogin(input_username.Text, input_password.Text))
+            {
+                MessageBox.Show("Le couple Login / Mot de passe est introuvable dans la base de donnée", "Authentification Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool CheckLogin(string login, string password)
+        {
+            return false;
         }
     }
 }
