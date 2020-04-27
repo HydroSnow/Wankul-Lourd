@@ -40,9 +40,10 @@
             // 
             // button_connect
             // 
-            this.button_connect.Location = new System.Drawing.Point(89, 89);
+            this.button_connect.Location = new System.Drawing.Point(119, 110);
+            this.button_connect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_connect.Name = "button_connect";
-            this.button_connect.Size = new System.Drawing.Size(75, 23);
+            this.button_connect.Size = new System.Drawing.Size(100, 28);
             this.button_connect.TabIndex = 3;
             this.button_connect.Text = "Connexion";
             this.button_connect.UseVisualStyleBackColor = true;
@@ -50,17 +51,19 @@
             // 
             // input_username
             // 
-            this.input_username.Location = new System.Drawing.Point(112, 22);
+            this.input_username.Location = new System.Drawing.Point(149, 27);
+            this.input_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.input_username.Name = "input_username";
-            this.input_username.Size = new System.Drawing.Size(120, 20);
+            this.input_username.Size = new System.Drawing.Size(159, 22);
             this.input_username.TabIndex = 1;
             this.input_username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.input_username_KeyDown);
             // 
             // input_password
             // 
-            this.input_password.Location = new System.Drawing.Point(112, 53);
+            this.input_password.Location = new System.Drawing.Point(149, 65);
+            this.input_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.input_password.Name = "input_password";
-            this.input_password.Size = new System.Drawing.Size(120, 20);
+            this.input_password.Size = new System.Drawing.Size(159, 22);
             this.input_password.TabIndex = 2;
             this.input_password.UseSystemPasswordChar = true;
             this.input_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.input_password_KeyDown);
@@ -68,18 +71,20 @@
             // label_username
             // 
             this.label_username.AutoSize = true;
-            this.label_username.Location = new System.Drawing.Point(18, 25);
+            this.label_username.Location = new System.Drawing.Point(24, 31);
+            this.label_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(84, 13);
+            this.label_username.Size = new System.Drawing.Size(113, 17);
             this.label_username.TabIndex = 0;
             this.label_username.Text = "Nom d\'utilisateur";
             // 
             // label_password
             // 
             this.label_password.AutoSize = true;
-            this.label_password.Location = new System.Drawing.Point(31, 56);
+            this.label_password.Location = new System.Drawing.Point(41, 69);
+            this.label_password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(71, 13);
+            this.label_password.Size = new System.Drawing.Size(93, 17);
             this.label_password.TabIndex = 0;
             this.label_password.Text = "Mot de passe";
             // 
@@ -90,21 +95,23 @@
             this.panel_input.Controls.Add(this.button_connect);
             this.panel_input.Controls.Add(this.label_username);
             this.panel_input.Controls.Add(this.input_username);
-            this.panel_input.Location = new System.Drawing.Point(128, 114);
+            this.panel_input.Location = new System.Drawing.Point(171, 140);
+            this.panel_input.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_input.Name = "panel_input";
-            this.panel_input.Size = new System.Drawing.Size(256, 128);
+            this.panel_input.Size = new System.Drawing.Size(341, 158);
             this.panel_input.TabIndex = 0;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(518, 345);
+            this.ClientSize = new System.Drawing.Size(691, 425);
             this.Controls.Add(this.panel_input);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Les Fromageries Wankul";

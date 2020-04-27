@@ -13,7 +13,8 @@ namespace Wankul
 
         private void Login_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Form loaded");
+            input_username.Text = "Titos";
+            input_password.Text = "girafe";
         }
 
         private void input_username_KeyDown(object sender, KeyEventArgs e)
@@ -38,12 +39,24 @@ namespace Wankul
             {
                 MessageBox.Show("Le couple Login / Mot de passe est introuvable dans la base de donnée", "Authentification Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                input_password.Clear();
+                input_username.Focus();
+                return;
             }
+            this.GoToMainWindow();
         }
 
         private bool CheckLogin(string login, string password)
         {
-            return false;
+            return true;
+        }
+
+        private void GoToMainWindow()
+        {
+            this.Hide();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Visible = true;
+            mainWindow.Activate();
         }
     }
 }

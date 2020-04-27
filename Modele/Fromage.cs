@@ -11,20 +11,21 @@ namespace Wankul
         public int id { get; set; }
         public string nom { get; set; }
         public string origine { get; set; }
+        public double prix { get; set; }
         public int lait { get; set; }
         public int type { get; set; }
         public string img { get; set; }
-        public double prix { get; set; }
 
-        public Fromage(int id, string nom, string origine, int lait, int type, string img, double prix)
+
+        public Fromage(Dictionary<string, string> dictionary)
         {
-            this.id = id;
-            this.nom = nom;
-            this.origine = origine;
-            this.lait = lait;
-            this.type = type;
-            this.img = img;
-            this.prix = prix;
+            this.id = dictionary["id"] == "" ? int.MaxValue : int.Parse(dictionary["id"]);
+            this.nom = dictionary["nom"];
+            this.origine = dictionary["origine"];
+            this.lait = int.Parse(dictionary["lait"]);
+            this.type = int.Parse(dictionary["type"]);
+            this.img = dictionary["img"];
+            this.prix = double.Parse(dictionary["prix"].Replace('.', ','));
         }
 
         public Fromage() { }
@@ -32,6 +33,7 @@ namespace Wankul
 
     public class ResponseFromage
     {
+        // Create an abstract class Response
         public bool valid { get; set; }
         public Fromage[] result { get; set; }
         public string error { get; set; }
