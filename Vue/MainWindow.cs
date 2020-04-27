@@ -9,8 +9,8 @@ namespace Wankul
     {
         private VueModeleFromage vmFromage = new VueModeleFromage();
         private dynamic[] listEntity;
+        private dynamic[] backupListEntity;
 
-        private string placeHolderFilterBox = "Filtrer";
         private string activeVue = Properties.Resources.FromageVue;
 
         private void RefreshEntityList(dynamic[] entitys)
@@ -90,6 +90,7 @@ namespace Wankul
                 MessageBox.Show(responseFromage.error);
                 return;
             }
+            backupListEntity = responseFromage.result;
             RefreshEntityList(responseFromage.result);
         }
 
@@ -111,21 +112,20 @@ namespace Wankul
 
         private void filterBox_TextChanged(object sender, EventArgs e)
         {
-            listBoxEntity.Clear();
-
-            // listEntity.Items.AddRange();
+            if (filterBox.Text != Properties.Resources.PlaceHodlerFilterBox)
+                RefreshEntityList(backupListEntity.Where(entity => entity.nom.ToLower().Contains(filterBox.Text.ToLower())).ToArray());
         }
 
         private void filterBox_Enter(object sender, EventArgs e)
         {
-            if (filterBox.Text == placeHolderFilterBox)
+            if (filterBox.Text == Properties.Resources.PlaceHodlerFilterBox)
                 filterBox.Text = "";
         }
 
         private void filterBox_Leave(object sender, EventArgs e)
         {
             if (filterBox.Text.Length == 0)
-                filterBox.Text = placeHolderFilterBox;
+                filterBox.Text = Properties.Resources.PlaceHodlerFilterBox;
         }
 
         private void listEntity_SelectedIndexChanged(object sender, EventArgs e)

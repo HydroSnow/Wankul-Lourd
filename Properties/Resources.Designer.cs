@@ -113,5 +113,14 @@ namespace Wankul.Properties {
                 return ResourceManager.GetString("NumberBoxs", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Filter.
+        /// </summary>
+        internal static string PlaceHodlerFilterBox {
+            get {
+                return ResourceManager.GetString("PlaceHodlerFilterBox", resourceCulture);
+            }
+        }
     }
 }

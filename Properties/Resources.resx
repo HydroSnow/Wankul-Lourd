@@ -135,4 +135,7 @@
   <data name="NumberBoxs" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="PlaceHodlerFilterBox" xml:space="preserve">
+    <value>Filter</value>
+  </data>
 </root>
