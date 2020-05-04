@@ -31,9 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FromageMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.LaitMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.TypeMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.ClientMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.FournisseurMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.listBoxEntity = new System.Windows.Forms.ListView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,9 +67,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FromageMenu,
             this.LaitMenu,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem3});
+            this.TypeMenu,
+            this.ClientMenu,
+            this.FournisseurMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -84,6 +84,7 @@
             this.FromageMenu.Name = "FromageMenu";
             this.FromageMenu.Size = new System.Drawing.Size(144, 26);
             this.FromageMenu.Text = "Fromage";
+            this.FromageMenu.Click += new System.EventHandler(this.FromageMenu_Click);
             // 
             // LaitMenu
             // 
@@ -91,40 +92,44 @@
             this.LaitMenu.Name = "LaitMenu";
             this.LaitMenu.Size = new System.Drawing.Size(144, 26);
             this.LaitMenu.Text = "Lait";
+            this.LaitMenu.Click += new System.EventHandler(this.LaitMenu_Click);
             // 
-            // toolStripMenuItem2
+            // TypeMenu
             // 
-            this.toolStripMenuItem2.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.toolStripMenuItem2.Font = new System.Drawing.Font("Stencil", 11F);
-            this.toolStripMenuItem2.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(144, 26);
-            this.toolStripMenuItem2.Text = "Catégorie";
+            this.TypeMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.TypeMenu.Font = new System.Drawing.Font("Stencil", 11F);
+            this.TypeMenu.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.TypeMenu.Name = "TypeMenu";
+            this.TypeMenu.Size = new System.Drawing.Size(144, 26);
+            this.TypeMenu.Text = "Type";
+            this.TypeMenu.Click += new System.EventHandler(this.TypeMenu_Click);
             // 
-            // toolStripMenuItem1
+            // ClientMenu
             // 
-            this.toolStripMenuItem1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Stencil", 11F);
-            this.toolStripMenuItem1.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(144, 26);
-            this.toolStripMenuItem1.Text = "Client";
+            this.ClientMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.ClientMenu.Font = new System.Drawing.Font("Stencil", 11F);
+            this.ClientMenu.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.ClientMenu.Name = "ClientMenu";
+            this.ClientMenu.Size = new System.Drawing.Size(144, 26);
+            this.ClientMenu.Text = "Client";
+            this.ClientMenu.Click += new System.EventHandler(this.ClientMenu_Click);
             // 
-            // toolStripMenuItem3
+            // FournisseurMenu
             // 
-            this.toolStripMenuItem3.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.toolStripMenuItem3.Font = new System.Drawing.Font("Stencil", 11F);
-            this.toolStripMenuItem3.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(144, 26);
-            this.toolStripMenuItem3.Text = "Fournisseur";
+            this.FournisseurMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.FournisseurMenu.Font = new System.Drawing.Font("Stencil", 11F);
+            this.FournisseurMenu.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.FournisseurMenu.Name = "FournisseurMenu";
+            this.FournisseurMenu.Size = new System.Drawing.Size(144, 26);
+            this.FournisseurMenu.Text = "Fournisseur";
+            this.FournisseurMenu.Click += new System.EventHandler(this.FournisseurMenu_Click);
             // 
             // listBoxEntity
             // 
             this.listBoxEntity.HideSelection = false;
             this.listBoxEntity.Location = new System.Drawing.Point(204, 57);
             this.listBoxEntity.Name = "listBoxEntity";
-            this.listBoxEntity.Size = new System.Drawing.Size(228, 475);
+            this.listBoxEntity.Size = new System.Drawing.Size(250, 475);
             this.listBoxEntity.TabIndex = 1;
             this.listBoxEntity.TabStop = false;
             this.listBoxEntity.UseCompatibleStateImageBehavior = false;
@@ -379,9 +384,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem FromageMenu;
         private System.Windows.Forms.ToolStripMenuItem LaitMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem TypeMenu;
+        private System.Windows.Forms.ToolStripMenuItem ClientMenu;
+        private System.Windows.Forms.ToolStripMenuItem FournisseurMenu;
         private System.Windows.Forms.ListView listBoxEntity;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;

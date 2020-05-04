@@ -125,8 +125,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modele\Token.cs" />
+    <Compile Include="Modele\Type.cs" />
+    <Compile Include="Modele\Utilisateur.cs" />
+    <Compile Include="Modele\Lait.cs" />
     <Compile Include="Modele\Fromage.cs" />
     <Compile Include="VueModele\AbstractVueModele.cs" />
+    <Compile Include="Service\LoginService.cs" />
+    <Compile Include="VueModele\VueModeleUtilisateur.cs" />
+    <Compile Include="VueModele\VueModeleType.cs" />
+    <Compile Include="VueModele\VueModeleLait.cs" />
     <Compile Include="Vue\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,7 +154,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>

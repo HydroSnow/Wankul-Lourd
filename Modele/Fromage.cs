@@ -33,7 +33,6 @@ namespace Wankul
 
     public class ResponseFromage
     {
-        // Create an abstract class Response
         public bool valid { get; set; }
         public Fromage[] result { get; set; }
         public string error { get; set; }

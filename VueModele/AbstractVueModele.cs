@@ -9,7 +9,10 @@ namespace Wankul
 {
     abstract class AbstractVueModele<E, R>
     {
-        protected string baseUrl = "https://wankul.hydrosnow.dev/api/";
+        // private string baseUrl = "https://wankul.hydrosnow.dev/api/";
+        private string baseUrl = "http://localhost:8000/api/";
+
+        private string token = LoginService.SingleInstance.GetToken();
 
         protected abstract string GetApiUrl();
 
@@ -25,6 +28,7 @@ namespace Wankul
             var client = new RestClient(baseUrl + GetApiUrl());
             client.Timeout = -1;
             var request = new RestRequest(Method.POST);
+            request.AddHeader("X-AUTH-TOKEN", token);
             request.AddJsonBody(SimpleJson.SerializeObject(entity));
             return SimpleJson.DeserializeObject<R>(client.Execute(request).Content);
         }
@@ -34,6 +38,7 @@ namespace Wankul
             var client = new RestClient(baseUrl + GetApiUrl() + '/' + entityId);
             client.Timeout = -1;
             var request = new RestRequest(Method.PUT);
+            request.AddHeader("X-AUTH-TOKEN", token);
             request.AddJsonBody(SimpleJson.SerializeObject(entity));
             return SimpleJson.DeserializeObject<R>(client.Execute(request).Content);
         }
@@ -42,7 +47,9 @@ namespace Wankul
         {
             var client = new RestClient(baseUrl + GetApiUrl() + '/' + entityId);
             client.Timeout = -1;
-            return SimpleJson.DeserializeObject<R>(client.Execute(new RestRequest(Method.DELETE)).Content);
+            var request = new RestRequest(Method.DELETE);
+            request.AddHeader("X-AUTH-TOKEN", token);
+            return SimpleJson.DeserializeObject<R>(client.Execute(request).Content);
         }
     }
 }

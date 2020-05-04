@@ -31,8 +31,12 @@ namespace Wankul
             return null;
         }
 
-        public bool Delete(Fromage fromage) { return DELETE(fromage.id).valid; }
-
-        public bool Delete(int fromageId) { return DELETE(fromageId).valid; }
+        public string Delete(int fromageId)
+        {
+            ResponseFromage responseFromage = DELETE(fromageId);
+            if (!responseFromage.valid)
+                return responseFromage.error;
+            return null;
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace Wankul.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Wankul.Properties {
         ///   Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Wankul.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Wankul.Properties {
         ///   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,18 +61,9 @@ namespace Wankul.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Categorie.
-        /// </summary>
-        internal static string CategorieVue {
-            get {
-                return ResourceManager.GetString("CategorieVue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Recherche une chaîne localisée semblable à Client.
         /// </summary>
-        internal static string ClientVue {
+        public static string ClientVue {
             get {
                 return ResourceManager.GetString("ClientVue", resourceCulture);
             }
@@ -81,7 +72,7 @@ namespace Wankul.Properties {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Fournisseur.
         /// </summary>
-        internal static string FournisseurVue {
+        public static string FournisseurVue {
             get {
                 return ResourceManager.GetString("FournisseurVue", resourceCulture);
             }
@@ -90,7 +81,7 @@ namespace Wankul.Properties {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Fromage.
         /// </summary>
-        internal static string FromageVue {
+        public static string FromageVue {
             get {
                 return ResourceManager.GetString("FromageVue", resourceCulture);
             }
@@ -99,7 +90,7 @@ namespace Wankul.Properties {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à Lait.
         /// </summary>
-        internal static string LaitVue {
+        public static string LaitVue {
             get {
                 return ResourceManager.GetString("LaitVue", resourceCulture);
             }
@@ -108,18 +99,27 @@ namespace Wankul.Properties {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à 7.
         /// </summary>
-        internal static string NumberBoxs {
+        public static string NumberBoxs {
             get {
                 return ResourceManager.GetString("NumberBoxs", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Filter.
+        ///   Recherche une chaîne localisée semblable à Filtrer.
         /// </summary>
-        internal static string PlaceHodlerFilterBox {
+        public static string PlaceHodlerFilterBox {
             get {
                 return ResourceManager.GetString("PlaceHodlerFilterBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Type.
+        /// </summary>
+        public static string TypeVue {
+            get {
+                return ResourceManager.GetString("TypeVue", resourceCulture);
             }
         }
     }
