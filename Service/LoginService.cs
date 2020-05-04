@@ -22,9 +22,7 @@ namespace Wankul
                 return singleInstance.Value;
             }
         }
-
-        // private string url = "https://wankul.hydrosnow.dev/api/login";
-        private string url = "http://localhost:8000/api/login";
+        
         private string token = "";
 
         public void SetToken(string t) { token = t; }
@@ -33,7 +31,7 @@ namespace Wankul
 
         public ResponseToken Login(string username_, string password_)
         {
-            var client = new RestClient(url);
+            var client = new RestClient(Program.API_ENDPOINT + "login");
             client.Timeout = -1;
             var request = new RestRequest(Method.POST);
             dynamic userObject = new { username = username_, password = password_ };

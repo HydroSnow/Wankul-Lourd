@@ -3,8 +3,11 @@ using System.Windows.Forms;
 
 namespace Wankul
 {
-    static class Program
+    public static class Program
     {
+        public const string API_ENDPOINT = "https://wankul.hydrosnow.dev/api/";
+        // public const string API_ENDPOINT = "http://localhost:8000/api/";
+
         static Login login_form;
 
 
