@@ -338,18 +338,16 @@ namespace Wankul
                     break;
                 case "Client":
                     Utilisateur client = new Utilisateur(GetEntityData(typeof(Utilisateur).GetProperties()));
-                    client.role = 3;
                     result = vmUtilisateur.Create(client);
                     VueClient();
                     break;
                 case "Fournisseur":
                     Utilisateur fournisseur = new Utilisateur(GetEntityData(typeof(Utilisateur).GetProperties()));
-                    fournisseur.role = 2;
                     result = vmUtilisateur.Create(fournisseur);
                     VueFournisseur();
                     break;
                 default:
-                    MessageBox.Show("Error with the current vue ");
+                    result = "Error with the current vue ";
                     break;
             }
             if (result != null)
